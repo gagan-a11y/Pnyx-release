@@ -1,6 +1,11 @@
 {
   "version": "0.1.0",
-  "notes": "Initial release",
-  "pub_date": "2026-07-01T00:00:00Z",
-  "platforms": {}
+  "notes": "Initial release of Pnyx — your AI meeting co-pilot.",
+  "pub_date": "2026-07-02T00:00:00Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSejhoRnc0WWk4TnU5bzNhMExJTi9iSitJT3ZPamNQMUV4YWNab3V3VlZlSENDQStmR2FtRUpwckZLSllmeFFIbDZGY1orWUNQZW9Jb3BJS2FrWXErMmZmbFhZOFM3SEFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTMyMTk2CWZpbGU6UG55eF8wLjEuMF9hYXJjaDY0LmFwcC50YXIuZ3oKeDhTV1ZHRzRUMHRKcmE5R0VHakQxYTN0ZThnS3VjdEt4RXFEQjUrRVlzWFpwcFNlQ0kzejNRSGE0QldBeUpGa0toOXc0ZXRteGgvem5sUW9jMi9GRFE9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.0/Pnyx_0.1.0_aarch64.app.tar.gz"
+    }
+  }
 }
