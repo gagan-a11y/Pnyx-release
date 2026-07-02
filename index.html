@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pnyx — AI Meeting Co-Pilot</title>
+  <meta name="description" content="Pnyx records, transcribes, and summarises your meetings so you never miss what matters." />
+  <meta property="og:title" content="Pnyx — AI Meeting Co-Pilot" />
+  <meta property="og:description" content="Real-time transcription, smart notes, and calendar-aware reminders. Free for Mac." />
+  <meta property="og:image" content="https://gagan-a11y.github.io/Pnyx-release/og.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #6352ed;
+      --purple-light: #a78bfa;
+      --purple-glow: rgba(99, 82, 237, 0.35);
+      --bg: #0f0f0f;
+      --surface: #1a1a1d;
+      --border: rgba(255,255,255,0.07);
+      --text: #f0f0f0;
+      --muted: rgba(255,255,255,0.45);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 60px;
+      background: rgba(15,15,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-logo span { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+    .nav-download {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px; border-radius: 20px;
+      background: var(--purple); color: #fff;
+      font-size: 13px; font-weight: 600;
+      text-decoration: none; transition: opacity .15s;
+    }
+    .nav-download:hover { opacity: 0.88; }
+
+    /* ── HERO ────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,82,237,0.18), transparent 60%);
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px; border-radius: 20px;
+      background: rgba(99,82,237,0.12);
+      border: 1px solid rgba(99,82,237,0.25);
+      font-size: 12px; font-weight: 500;
+      color: var(--purple-light);
+      margin-bottom: 32px;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-wrap {
+      width: 88px; height: 88px;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 16px 40px rgba(99,82,237,0.5));
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.6));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+      line-height: 1.65;
+    }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 14px;
+      background: var(--purple); color: #fff;
+      font-size: 15px; font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(99,82,237,0.4);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 32px rgba(99,82,237,0.55); }
+
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 24px; border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: rgba(255,255,255,0.7);
+      font-size: 15px; font-weight: 500;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+    .req-note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── FEATURES ────────────────────────────────────────────────── */
+    .features {
+      padding: 80px 24px;
+      max-width: 1000px; margin: 0 auto;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700; letter-spacing: -0.8px;
+      margin-bottom: 56px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      padding: 28px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: border-color .2s;
+    }
+    .feature-card:hover { border-color: rgba(99,82,237,0.3); }
+
+    .feature-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: rgba(99,82,237,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      font-size: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 16px; font-weight: 600;
+      margin-bottom: 8px; letter-spacing: -0.2px;
+    }
+
+    .feature-card p {
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+
+    /* ── HOW IT WORKS ────────────────────────────────────────────── */
+    .how {
+      padding: 80px 24px;
+      background: linear-gradient(180deg, transparent, rgba(99,82,237,0.04), transparent);
+    }
+
+    .steps {
+      max-width: 680px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 0;
+    }
+
+    .step {
+      display: flex; gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: rgba(99,82,237,0.15);
+      border: 1px solid rgba(99,82,237,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+      color: var(--purple-light);
+    }
+
+    .step h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .step p { font-size: 14px; color: var(--muted); }
+
+    /* ── CTA ─────────────────────────────────────────────────────── */
+    .cta {
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700; letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: var(--muted); font-size: 17px;
+      margin-bottom: 40px;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+
+    footer .logo { display: flex; align-items: center; gap: 8px; }
+    footer .logo svg { width: 20px; height: 20px; }
+    footer .logo span { font-size: 14px; font-weight: 600; }
+
+    footer p { font-size: 13px; color: var(--muted); }
+
+    /* ── APPLE ICON ──────────────────────────────────────────────── */
+    .apple-icon { display: inline-block; line-height: 1; }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="22" fill="#6352ed"/>
+      <text x="50" y="68" font-size="54" text-anchor="middle" fill="white" font-family="-apple-system,sans-serif" font-weight="700">P</text>
+    </svg>
+    <span>Pnyx</span>
+  </a>
+  <a class="nav-download" href="https://github.com/gagan-a11y/Pnyx-release/releases/latest/download/Pnyx_0.1.0_aarch64.dmg">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+    Free · macOS only
+  </div>
+
+  <svg class="logo-wrap" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="22" fill="#6352ed"/>
+    <text x="50" y="68" font-size="54" text-anchor="middle" fill="white" font-family="-apple-system,sans-serif" font-weight="700">P</text>
+  </svg>
+
+  <h1>Your AI<br/>Meeting Co-Pilot</h1>
+
+  <p class="hero-sub">
+    Pnyx sits quietly in your menu bar, listens to your meetings,
+    and hands you sharp notes the moment you stop recording.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://github.com/gagan-a11y/Pnyx-release/releases/latest/download/Pnyx_0.1.0_aarch64.dmg">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download for Mac
+    </a>
+    <a class="btn-secondary" href="https://github.com/gagan-a11y/Pnyx-release/releases" target="_blank">
+      View all releases
+    </a>
+  </div>
+
+  <p class="req-note">Requires macOS 13 Ventura or later · Apple Silicon &amp; Intel</p>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <p class="section-label">Features</p>
+  <h2 class="section-title">Everything you need, nothing you don't</h2>
+  <div class="features-grid">
+
+    <div class="feature-card">
+      <div class="feature-icon">🎙️</div>
+      <h3>Real-time transcription</h3>
+      <p>Streams your microphone to the cloud and shows words on screen as they're spoken — under 2 seconds of latency.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>Smart meeting notes</h3>
+      <p>The moment you stop recording, Pnyx generates a structured summary with key points, decisions, and action items.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📅</div>
+      <h3>Calendar-aware reminders</h3>
+      <p>Connects to Google Calendar and fires a native notification 1 minute before each meeting starts.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">💬</div>
+      <h3>Ask anything about the meeting</h3>
+      <p>Chat with your transcript after the meeting ends — ask for context, clarifications, or follow-up questions.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Private by design</h3>
+      <p>Your transcripts and notes are stored only in your account. No third-party training, no data sharing.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Lives in your menu bar</h3>
+      <p>Zero UI clutter. One click to start recording, one click to stop. Everything else happens automatically.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div style="max-width:680px;margin:0 auto 48px;text-align:center;">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Three steps from install to insight</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Install &amp; sign in</h3>
+        <p>Download the DMG, drag Pnyx to Applications, and sign in with Google. Takes under a minute.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Start recording</h3>
+        <p>Click the Pnyx icon in your menu bar, hit Record, and join your meeting. Transcription starts immediately.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Get your notes</h3>
+        <p>Stop recording when you're done. Pnyx generates structured notes in seconds, ready to share or search.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to stop taking notes?</h2>
+  <p>Download Pnyx and let AI handle it for you.</p>
+  <a class="btn-primary" href="https://github.com/gagan-a11y/Pnyx-release/releases/latest/download/Pnyx_0.1.0_aarch64.dmg" style="display:inline-flex;font-size:16px;padding:16px 32px;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Pnyx — it's free
+  </a>
+  <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,0.2);">macOS 13+ · Apple Silicon &amp; Intel</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">
+    <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+      <rect width="100" height="100" rx="22" fill="#6352ed"/>
+      <text x="50" y="68" font-size="54" text-anchor="middle" fill="white" font-family="-apple-system,sans-serif" font-weight="700">P</text>
+    </svg>
+    <span>Pnyx</span>
+  </div>
+  <p>© 2026 Pnyx. Built for people who hate taking notes.</p>
+</footer>
+
+</body>
+</html>
