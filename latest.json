@@ -1,11 +1,11 @@
 {
-  "version": "0.1.3",
-  "notes": "v0.1.3 — In-app auto-update with progress bar, smarter notification permission (no popup if already allowed), fixed Open Settings button.",
+  "version": "0.1.4",
+  "notes": "v0.1.4 — Fixed notification permission popup showing on every launch, Open Settings now lands directly on Pnyx's notification row, fixed app reopen by double-clicking the icon.",
   "pub_date": "2026-07-02T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSejhoRnc0WWk4TnFNRkhuSEgrWUprblNsemZXVWpNckJWYzZJdVVjZnBTTXNVeitzaGhDL1hwM0NXSUh2K0ExRXdCSjNYMHliYmZsSUcyQ3pZUGluZjVoVGtlTmE1YlFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTc2MDM2CWZpbGU6UG55eF8wLjEuM19hYXJjaDY0LmFwcC50YXIuZ3oKVTYwTXRtN2FXTUZhdWpaenpKNW1oTUxvU1ZlN2R6cWtrNTk3bXN3U1pHbUNoV1VtQTVhREgwRFpuZFRwdEtqWUNHTThqTjBodUoyazRJL1QwMEZFRFE9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.3/Pnyx_0.1.3_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK2FuRFZlVHF0Wnowc3pBWldDNHpaNlJ2ZGNPNjJnUEhOTlFad0NGclllaWFsUFFMbjBoY0VlSGRHV1BlWkFzdTJ2aTVBL3cwbDJnd2xveEZpZkxxZ3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTg4MTczCWZpbGU6UG55eF8wLjEuNF9hYXJjaDY0LmFwcC50YXIuZ3oKQUZ0ZmMzNVVhTFlyWUxBRm5YNnM5TkpkbTVHNDgxNkFHd09zSjgzMXFEN3RGeDVQV1Z0aUR6NkgwakN1Ky9JZUhxbTI4YWUzb252VVkremZCdDJtQ0E9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.4/Pnyx_0.1.4_aarch64.app.tar.gz"
     }
   }
 }
