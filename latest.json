@@ -1,11 +1,11 @@
 {
-  "version": "0.1.6",
-  "notes": "v0.1.6 — Fix notification banners not appearing when Pnyx window is open (foreground delegate with correct block invocation).",
+  "version": "0.1.7",
+  "notes": "v0.1.7 — Fix notifications not appearing when window is open; discard empty meetings immediately.",
   "pub_date": "2026-07-02T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1p4RE9sUGZ4ZDhDTk9ETCt3eVdyQ24wR3JUQkVLelBIZTNiY0VLNGc3YWV1bnlGejRKMWRSWmFaMUdQa0dLbG13am1VemlUR1ZFYkk3VG1lNE1OSGdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkwMjkzCWZpbGU6UG55eF8wLjEuNl9hYXJjaDY0LmFwcC50YXIuZ3oKN053QjNod0o5NFZLRUVZamI2OUp0d2QvdkluSndZWEFla0Vic3F1MCtvSGJ6UzdCVUoydVdXditDUmp0a0pMQmxRaU1mV2h5MGxVU1UralhHMndQQVE9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.6/Pnyx_0.1.6_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK2RZcnoyN2VXa0R0azY2Z0lWR1RDWkdXZmNZVHhHL0toZ3Zsa3hqYzVLZ0plZEtjNzhNZTBzNDFtWHJDT2RLRlllYzRQYldqb1dneVo4cHc1YmFVWVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkxNjEwCWZpbGU6UG55eF8wLjEuN19hYXJjaDY0LmFwcC50YXIuZ3oKTGF5MlZGbkJuemkvMFoxTnJsNDh3SkQyamJJSk0vM1dtbWYwNEhQa0x6OXlPckNOcWdpQzlCbUZ4UGlQMWthbFV2Z3IwTytmWitRZ2hVd2MrRkQzREE9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.7/Pnyx_0.1.7_aarch64.app.tar.gz"
     }
   }
 }
