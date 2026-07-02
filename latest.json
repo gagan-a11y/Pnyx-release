@@ -1,11 +1,11 @@
 {
-  "version": "0.1.1",
-  "notes": "Initial release of Pnyx — your AI meeting co-pilot.",
+  "version": "0.1.2",
+  "notes": "v0.1.2 — Notification permission popup, fixed Open Settings button, auto-updater improvements.",
   "pub_date": "2026-07-02T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSejhoRnc0WWk4TnU5bzNhMExJTi9iSitJT3ZPamNQMUV4YWNab3V3VlZlSENDQStmR2FtRUpwckZLSllmeFFIbDZGY1orWUNQZW9Jb3BJS2FrWXErMmZmbFhZOFM3SEFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTMyMTk2CWZpbGU6UG55eF8wLjEuMF9hYXJjaDY0LmFwcC50YXIuZ3oKeDhTV1ZHRzRUMHRKcmE5R0VHakQxYTN0ZThnS3VjdEt4RXFEQjUrRVlzWFpwcFNlQ0kzejNRSGE0QldBeUpGa0toOXc0ZXRteGgvem5sUW9jMi9GRFE9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.1/Pnyx_0.1.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSejhoRnc0WWk4TnBGVExQbk9JRjBMWjRySU9HQTN2UDdkVXRLQUtKZlRIc1V5d2ZYcS9Mc2R5c21oQnhBVXcza2dnMnAxbzk4blVhQURHZUdPYVl3emd4RHRpSmR5aEFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTc1MDA0CWZpbGU6UG55eF8wLjEuMl9hYXJjaDY0LmFwcC50YXIuZ3oKc056RmFWVjQ3MlJ1WldSL2d4R3hDSnNlK3hSd1A0SXpKS25vaUpBcE5QZVZvTXBiMUFEc2RpSng0RUNYK0c2NXVLTUtWR25POGtVM1J4cUVxeThGQ1E9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.2/Pnyx_0.1.2_aarch64.app.tar.gz"
     }
   }
 }
