@@ -1,11 +1,11 @@
 {
-  "version": "0.1.4",
-  "notes": "v0.1.4 — Fixed notification permission popup showing on every launch, Open Settings now lands directly on Pnyx's notification row, fixed app reopen by double-clicking the icon.",
+  "version": "0.1.6",
+  "notes": "v0.1.6 — Fix notification banners not appearing when Pnyx window is open (foreground delegate with correct block invocation).",
   "pub_date": "2026-07-02T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK2FuRFZlVHF0Wnowc3pBWldDNHpaNlJ2ZGNPNjJnUEhOTlFad0NGclllaWFsUFFMbjBoY0VlSGRHV1BlWkFzdTJ2aTVBL3cwbDJnd2xveEZpZkxxZ3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTg4MTczCWZpbGU6UG55eF8wLjEuNF9hYXJjaDY0LmFwcC50YXIuZ3oKQUZ0ZmMzNVVhTFlyWUxBRm5YNnM5TkpkbTVHNDgxNkFHd09zSjgzMXFEN3RGeDVQV1Z0aUR6NkgwakN1Ky9JZUhxbTI4YWUzb252VVkremZCdDJtQ0E9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.4/Pnyx_0.1.4_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1p4RE9sUGZ4ZDhDTk9ETCt3eVdyQ24wR3JUQkVLelBIZTNiY0VLNGc3YWV1bnlGejRKMWRSWmFaMUdQa0dLbG13am1VemlUR1ZFYkk3VG1lNE1OSGdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkwMjkzCWZpbGU6UG55eF8wLjEuNl9hYXJjaDY0LmFwcC50YXIuZ3oKN053QjNod0o5NFZLRUVZamI2OUp0d2QvdkluSndZWEFla0Vic3F1MCtvSGJ6UzdCVUoydVdXditDUmp0a0pMQmxRaU1mV2h5MGxVU1UralhHMndQQVE9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.6/Pnyx_0.1.6_aarch64.app.tar.gz"
     }
   }
 }
