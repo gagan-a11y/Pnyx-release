@@ -1,11 +1,11 @@
 {
-  "version": "0.1.9",
-  "notes": "v0.1.9 — Calendar connected on login; tray 'Connect your calendar →'; update error now shows download link; cancel button on sign-in; tray Quit works from login screen.",
+  "version": "0.1.10",
+  "notes": "v0.1.10 — Fix Ask AI during live meetings: live transcript now sent directly to AI without waiting for save.",
   "pub_date": "2026-07-03T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1NkS2tybkRxUk8yOHhzaGVJS0JPVEVVbDhyRG8xTUhUZ2pidXpDaGFlOWhRdFFrZC9aSXprRHpSMGcrMVgyejBxUEk4UVhDcVBaQ3hUalM2d3ptWlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDU4NjA1CWZpbGU6UG55eF8wLjEuOV9hYXJjaDY0LmFwcC50YXIuZ3oKcnBkaXN4djVwa080RGY3a0lMT1h5Z255VHhkb3UxZVF3QXdZZmszM3l0aGJUQm9iWEtwT3lqdG9NNlo2STN0VUR4VVhSMjhRWG50UW1lV3VEajErREE9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.9/Pnyx_0.1.9_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1kyRVlRbDd3M204eFR4M2VMK081YUQxZnRDMHhqMjZqamlXOERXbDFvZmp4eXF2azdsNkR4bTludjUrWitLZ1BhNVI1cGFEQTZ5R05EbGkvb1VaUFFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDU5NDYxCWZpbGU6UG55eF8wLjEuMTBfYWFyY2g2NC5hcHAudGFyLmd6CmJkU2lLVWcvZnVpUU94aHBIR0JhTk1lY05XMUM2MjFqRURVYkd4U2gxMyt1MEdwOHZyY29UNzNsNmpMaW5ROCtaUGdQSkNxRjRlakMvRFFYRW5SeEJBPT0K",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.10/Pnyx_0.1.10_aarch64.app.tar.gz"
     }
   }
 }
