@@ -1,11 +1,11 @@
 {
-  "version": "0.1.8",
-  "notes": "v0.1.8 — Calendar connected on login; tray shows 'Connect your calendar →' when not connected.",
+  "version": "0.1.9",
+  "notes": "v0.1.9 — Calendar connected on login; tray 'Connect your calendar →'; update error now shows download link; cancel button on sign-in; tray Quit works from login screen.",
   "pub_date": "2026-07-03T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1g5eVYxS0M1WkhsUHY0bnJ3eUtlMnpIdGxERzFDSU9kcTFRYWgwdUVVT21UeStiT3RUQkl6RWhWU2RFcStQbHB4ZEpUNTVwNmNnUkVaeXFpWFRoYUFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDU3MzAzCWZpbGU6UG55eF8wLjEuOF9hYXJjaDY0LmFwcC50YXIuZ3oKUEZZaDBzK2MyOHlSdC9odXByWHdDaDhtanVJZlg0Wld5TTY5bnphTjQ3T1RoM29LYXo0NXNPQnVyRnFKUkt3QmlvNndmS3o2bzBwSUsxOG1VY0U2QkE9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.8/Pnyx_0.1.8_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1NkS2tybkRxUk8yOHhzaGVJS0JPVEVVbDhyRG8xTUhUZ2pidXpDaGFlOWhRdFFrZC9aSXprRHpSMGcrMVgyejBxUEk4UVhDcVBaQ3hUalM2d3ptWlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDU4NjA1CWZpbGU6UG55eF8wLjEuOV9hYXJjaDY0LmFwcC50YXIuZ3oKcnBkaXN4djVwa080RGY3a0lMT1h5Z255VHhkb3UxZVF3QXdZZmszM3l0aGJUQm9iWEtwT3lqdG9NNlo2STN0VUR4VVhSMjhRWG50UW1lV3VEajErREE9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.9/Pnyx_0.1.9_aarch64.app.tar.gz"
     }
   }
 }
