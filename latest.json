@@ -1,11 +1,11 @@
 {
-  "version": "0.1.7",
-  "notes": "v0.1.7 — Fix notifications not appearing when window is open; discard empty meetings immediately.",
-  "pub_date": "2026-07-02T00:00:00Z",
+  "version": "0.1.8",
+  "notes": "v0.1.8 — Calendar connected on login; tray shows 'Connect your calendar →' when not connected.",
+  "pub_date": "2026-07-03T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK2RZcnoyN2VXa0R0azY2Z0lWR1RDWkdXZmNZVHhHL0toZ3Zsa3hqYzVLZ0plZEtjNzhNZTBzNDFtWHJDT2RLRlllYzRQYldqb1dneVo4cHc1YmFVWVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyOTkxNjEwCWZpbGU6UG55eF8wLjEuN19hYXJjaDY0LmFwcC50YXIuZ3oKTGF5MlZGbkJuemkvMFoxTnJsNDh3SkQyamJJSk0vM1dtbWYwNEhQa0x6OXlPckNOcWdpQzlCbUZ4UGlQMWthbFV2Z3IwTytmWitRZ2hVd2MrRkQzREE9PQo=",
-      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.7/Pnyx_0.1.7_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRQzlKaENyRzRxK1g5eVYxS0M1WkhsUHY0bnJ3eUtlMnpIdGxERzFDSU9kcTFRYWgwdUVVT21UeStiT3RUQkl6RWhWU2RFcStQbHB4ZEpUNTVwNmNnUkVaeXFpWFRoYUFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzMDU3MzAzCWZpbGU6UG55eF8wLjEuOF9hYXJjaDY0LmFwcC50YXIuZ3oKUEZZaDBzK2MyOHlSdC9odXByWHdDaDhtanVJZlg0Wld5TTY5bnphTjQ3T1RoM29LYXo0NXNPQnVyRnFKUkt3QmlvNndmS3o2bzBwSUsxOG1VY0U2QkE9PQo=",
+      "url": "https://github.com/gagan-a11y/Pnyx-release/releases/download/v0.1.8/Pnyx_0.1.8_aarch64.app.tar.gz"
     }
   }
 }
